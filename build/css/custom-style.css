@@ -1,0 +1,384 @@
+	.space input{
+		margin-bottom: 10px;
+		margin-top: 5px;
+	}
+	.space label{
+		margin-top: 10px;
+	}
+	.fdback label{
+		margin-top: 10px;
+		margin-bottom: 5px;
+	}
+	.fd-back button{
+		margin-top: 10px;
+	}
+	.expenses-form.form-horizontal .control-label {
+		text-align: left;
+	}
+	.form-documents{
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		clear: both;
+	}
+	.form-documents i{
+		padding-right: 5px;
+		padding-left: 20px;
+	}
+	.form-documents1{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		clear: both;
+	}
+	.form-documents1 i{
+		padding-right: 10px;
+		
+	}
+
+	.custrept legend{
+		padding-top: 20px;
+	}
+ .vertical-heading td {
+ 	vertical-align: bottom;
+ }
+ .vertical-heading > tbody > tr > td {
+    vertical-align: bottom;
+}
+.graph canvas{
+	height: 100px;
+}
+.graph h4{
+	text-align: center;
+	    font-size: 15px;
+
+}
+.graph{
+	background: none;
+	border: none;
+	padding: 0;
+}
+div.grap{
+	padding: 0;
+	margin: 0;
+}
+
+
+.not-subted {
+  color: #fa5e5e;
+ 
+}
+
+.sbmited {
+  color: yellow;
+  background-color: grey;
+}
+
+.approved {
+  color: lightgreen;
+}
+.approve p{
+  background-color: lightgreen;
+}
+.locked-period{
+	color:lightgray;
+}
+
+.sortable{
+	list-style-type: none;
+	 margin: 0;
+	  padding:0;
+	   
+}
+.sortable li{
+
+}
+.administrator i{
+	color: pink;
+}
+.report-viewer i{
+	color: orange;
+}
+.data-entry i{
+	color: green;
+}
+.manager i{
+	color: red;
+}
+.user-profile i{
+	color: blue;
+}
+.timeline-view{
+	 margin-bottom: 5px;
+	 margin-top: -10px;
+}
+.timeline-view h1{
+	    font-size: 24px;
+    font-weight: 600;
+}
+
+.timeline-view strong{
+	font-size: 13px;
+	margin-left:10px;
+}
+.signature {
+   width: 200px;
+   height: 150px;
+    border: 1px dashed silver;
+}
+.signature-line {
+    margin: 100px 5px 30px 5px;
+    border: 0;
+    border-top: 1pt solid #444;
+    height: 1pt;
+}
+.list-style ul{ 
+	
+    line-height: 1.7;
+    margin-top: 5px;
+    
+}
+.list-style li{
+list-style-type: circle;
+    color: #3498DB;
+    font-size: 14px;
+    font-weight: bold;
+}
+.list-style legend{
+	font-weight: bold;
+}
+.indent-name p{
+	text-indent: 1em;
+	    margin: 0 ;
+}
+.indent-name h6{
+	margin: 0;	
+	text-indent: 2em;
+}
+.file-btn{
+	padding: 3px;
+	margin-top: 5px;
+}
+.btn-narrow {
+	display: inline-block;
+	padding: 6px 5px;
+	margin-bottom: 0;
+
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 1.42857143;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	-ms-touch-action: manipulation;
+	touch-action: manipulation;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-image: none;
+	border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+	border-radius: 4px;
+}
+
+.opt-strong{
+	font-weight: bold;
+}
+
+.bg-billable {
+    background-color: #17B758 !important;
+    color: #fff;
+}
+.bg-nonbill {
+    background-color: #225AA7  !important;
+    color: #fff;
+}
+
+.bil-able a>b{
+    color: #17B758;
+}
+.bil-able p>a{
+    color: #17B758;
+}
+.bil-able h6>a{
+    color: #17B758;
+}
+.no-bill a>b{
+    color:  #337ab7 ;
+}
+.no-bill p>a{
+    color:  #337ab7 ;
+}
+.no-bill h6>a{
+    color:  #337ab7 ;
+}
+
+
+.crossed-out:after{
+        content: '/';
+        color: #e74c3c;
+        display: block;
+        position: relative;
+        left: 2px;
+        bottom: 3px;
+        text-align: center;
+        font-size: 1.5em;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(35deg);
+        -ms-transform: rotate(35deg);
+}
+.fa-stack {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    line-height: 2em;
+    vertical-align: middle;
+}
+.timesheet-panel{
+	background-color: #fff;
+}
+
+.form-group1 input{
+	margin-bottom: 5px;
+	margin-top: 5px;	
+}
+
+.table.jambo_table.bulk_action.mobile-table-week table tr th,
+ .table.jambo_table.bulk_action.mobile-table-week tr table tr td{
+	padding:5px 3px 0 0;
+}
+.project-space p{
+	margin: 0;
+}
+.dropdown-menu{
+	font-family: Georgia, serif;
+}
+
+@media (max-width: 420px) {
+    .timeline-view strong{
+        font-size: 12px;
+    }
+    .mainb{
+    	max-width:100%;
+    }
+    .wrp-text{
+    	white-space: normal;
+    }
+
+}
+@media (min-width: 490px) {
+	input.week-input-mobile {
+    max-width: 42px;
+    margin: 0 10px;
+
+}
+	}
+.text-font label{
+	font-size: 14px;
+	padding-top: 5px;
+}
+.cal-btn{
+	position: relative;
+	left: 22px;
+	border: none;
+}
+.dropdown-menu>li>a>span{
+
+	font-size: 13px;
+	font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+}
+
+.present{
+	margin-top: 5px;
+}
+.btn-primary:active:hover,{
+	background-color: #225AA7;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0px;
+  bottom: 0;
+  padding: 8px 2px;
+  background: #225AA7;
+  color: #fff;
+  pointer-events: none;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  display: block;
+  margin: 1px 32px;
+  padding: 4px;
+  width: 19em;
+}
+
+.icons-space li a i {
+    padding: 10px 2px;
+}
+.table > tbody > tr > td  {
+	padding:5px 3px;
+}
+.head-btn{
+	padding:5px;
+}
+.mdl-ftr p{
+	text-align: left;
+	float: left;
+}
+.tab-bar > li.active > a, .tab-bar > li.active > a:hover, .tab-bar > li.active > a:focus{
+	color: #555;
+    cursor: default;
+    background-color: #F7F7F7;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+/*@media (min-width: 480px){
+ul.bar_tabs {
+    height: auto !important;
+	}
+}*/
+.canvasjs-chart-credit {
+   display: none;
+}
+.hidetxt {
+    width: 59px;
+    height: 9px;
+    background-color: #fff;
+    position: relative;
+    bottom: 11px;
+}
+@media (min-width: 460px) {
+.top_nav .navbar-right {
+    margin: 0;
+    width: 40%;
+    float: right;
+    padding-right: 27px;
+}
+}
+.fa-plus{
+	font-size: 13px;
+}
+.fa-minus{
+	font-size: 13px;
+}
+.quick-font li>a{
+	font-size: 16px;
+	font-weight: bold;
+}
+.timesheet-view h3{
+	text-align: center;
+}
+.modal-footer{
+	text-align: center;
+}
+.ryt-txt b{
+	position: relative;
+	left: 5px;
+}
+

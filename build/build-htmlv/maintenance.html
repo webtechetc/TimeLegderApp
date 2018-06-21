@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+    <title>App Timeledger</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- iCheck -->
+    <link href="lib/iCheck/skins/flat/green.css" rel="stylesheet">
+    <!-- NProgress -->
+   
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i" rel="stylesheet"> 
+
+    <!-- Custom Theme Style -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col ">
+          <div class="left_col scroll-view">
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Alex John</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a href="javascript:;"><i class="fa fa-home"></i> Dashboard </a></li>
+                  <li><a href="time-entry.html"><i class="fa fa-desktop"></i> Time Entry </a></li>
+                  <li><a href="javascript:;"><i class="fa fa-table"></i> Expenses </a></li>
+                  <li><a href="javascript:;"><i class="fa fa-bar-chart-o"></i> Reports </a></li>
+                  <li><a href="javascript:;"><i class="fa fa-dashboard"></i>Maintenance </a></li>
+                  <li><a href="settings.html"><i class="fa fa-cogs"></i>Settings <span class="fa fa-chevron-down"></span></a>
+                  	<ul class="nav child_menu">
+                      <li><a href="javascript:;">Your Settings</a></li>
+                      <li><a href="javascript:;">Company Settings</a></li>
+                      
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              
+              <div class="logo-app"><img src="images/logo-alex.png" alt="app-logo"></div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">Alex John
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                   <li><a data-toggle="modal" href="javascript:;" data-target="#SupportModal">Support</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#FeedbackModal">Feedback</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#EmailModal">Email this Page</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#FriendModal">Tell a Friend</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-blue">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col settings" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+              	<br/>
+                <p>Home / Maintenance</p>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <div class="" role="tabpanel" data-example-id="togglable-tabs">
+               <div class="col-md-12 ">
+                <div class="row">
+                  <ul id="myTab" class="nav nav-tabs bar_tabs pull-left" role="tablist" >
+                    <li role="presentation" class="active">
+                        <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Quick</a>
+                      </li>
+                      <li role="presentation" >
+                       <a href="#tab_content2" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Clients</a>
+                      </li>
+                      <li role="presentation" >
+                        <a href="#tab_content3" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Matters</a>
+                      </li>
+                       <li role="presentation" >
+                        <a href="#tab_content4" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Activities</a>
+                      </li>
+                      <li role="presentation" >
+                        <a href="#tab_content5" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Users</a>
+                      </li>
+                      <li role="presentation" >
+                        <a href="#tab_content6" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Groups</a>
+                      </li>
+                      <li role="presentation" >
+                        <a href="#tab_content7" id="home-tab" role="tab" data-toggle="tab" aria-expanded="false">Expense Types</a>
+                      </li>
+                  </ul>
+                </div>
+                </div>
+                
+                <div class="col-xs-12" style="background: #e1e1e1;margin-bottom: 30px;height: 1px;"></div>
+                  
+                <div id="myTabContent" class="tab-content">
+                    <!--=============================== Tab  Time entry 1 =================================-->
+                    <div role="tabpanel" class="tab-pane fade active in" id="tab_content1" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Quick</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content quick">
+                               <h3>Quick Search</h3>
+                              <div class="ln_solid"></div>
+                              <div class="col-sm-12">
+                              
+                              <p>(A good way to avoid adding double items (Clients, Matters, Activities or Users) is to first search for an item in the above search box. You can just type a few characters which can be in any part of the item title. If that item already exists - it will come up as a link so you can view it quickly.)</p>
+                              <div class="ln_solid">
+                                </div>
+                              </div>
+                              <div class="col-sm-12 row">
+                                 
+                                
+                                  <div class="col-sm-8 ">
+                                     <label>Select the Maintenance Items you want to search:</label>
+                                     
+                                <div class="col-sm-12">
+                               <div class="checkbox checkbox-inline checkbox-success form-group">
+                                  <input type="checkbox" id="" value="">
+                                  <label for="">Clients</label>
+                              </div>
+                              <div class="checkbox checkbox-inline checkbox-success ">
+                                  <input type="checkbox" id="" value="">
+                                  <label for=""> Matters </label>
+                              </div>
+                              <div class="checkbox checkbox-inline checkbox-success">
+                                  <input type="checkbox" id="" value="">
+                                  <label for=""> Users </label>
+                              </div>
+                              <div class="checkbox checkbox-inline checkbox-success">
+                                  <input type="checkbox" id="" value="">
+                                  <label for="">Activities</label>
+                              </div>
+                              <div class="checkbox checkbox-inline checkbox-success">
+                                  <input type="checkbox" id="" value="">
+                                  <label for=""> Exclude Inactive Items </label>
+                              </div>
+                            </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                              <label>Type any part of any item (minimum 2 characters):</label>
+                              <div class="input-group">
+                              <input type="" class="form-control" name="">
+                            <span class="input-group-btn">
+                               <button type="button" class="btn btn-primary">Go!</button>
+                                </span>
+                          </div>
+                            </div>
+                            </div>
+                            <div class="col-sm-12">
+                              <div class="row">
+                              <div class="col-sm-3">
+                              <h3>Maintenance</h3>
+                            </div>
+                            <div class="col-sm-9">
+                              <h5></h5>
+                            </div>
+                          </div>
+                              <div class="ln_solid"></div>
+                            </div>
+                            <div class="col-sm-4">
+                              <ul>
+                                <li><a href="">Clients</a></li>
+                                <ul>
+                                  <li><a href="">Matters and Subprojects</a></li>
+                                  (Add one or more Matters per Client)
+                                  <ul>
+                                    <li><a href="">Matter Categories</a></li>
+                                    (Create and types of Matters so they can be categorized in reports.)
+                                  </ul>
+                                </ul>
+                                <li><a href=""> Activities</a></li>
+                                <ul><li>(For reporting across Clients and Matters i.e. "meetings", "travel", "phone call", etc.)</li></ul>
+                              </ul>
+                            </div>
+                            <div class="col-sm-4">
+                              <ul>
+                                <li><a href="">Users</a></li>
+                                <ul>
+                                  <li><a href="">Groups</a></li>
+                                </ul>
+                              <li><a href="">Expense Types</a></li>
+                              <li><a href="">Time Entry Tags</a></li>
+                              <ul>
+                                <li>(Create tag categories to add to time entries that can be used for searching and reports - such as "Location" or other time entry type.)</li>
+                              </ul>
+                            </ul>
+                            </div>
+                            <div class="col-sm-4">
+                              <ul>
+                                <li><a href="">Holiday Schedule</a></li>
+                                <li><a href="">Tax Rules for Invoices</a></li>
+                              </ul>
+                            </div>
+                            <div class="col-sm-12">
+                            <h3>Import</h3>
+                            <div class="ln_solid"></div>
+                            <ul><li><a href="">Import Users, Matters, and/or Clients from QuickBooks</a></li></ul>
+                            <h3>Export</h3>
+                            <div class="ln_solid"></div>
+                            <ul>
+                              <li><a href="">Export Timeledger data in saveable custom formats</a></li>
+                              <li><a href="">Export Time, Expense, Users, Matters, and/or Clients to QuickBooks</a></li>
+                              <li><a href="">Export Timeledger data to Excel</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                            </div>
+
+                        </div>
+                    <!-- =================== Tab  Time entry End 1 ================================================-->
+                    <!--=============================== Tab  Time entry 2 =================================-->
+                  <div role="tabpanel" class="tab-pane fade  " id="tab_content2" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Client Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content text-center">
+                             <div class="col-sm-12">
+                              <h4><a href="">Archived Clients Maintenance</a></h4>
+                              <h3>Add, edit or inactivate a Client:</h3>
+                              <div class="ln_solid"></div>
+                            </div>
+                            
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <label for="ex3">Type any part of the Client Name:</label>
+                                <input type="text" id="ex3" class="form-control" placeholder=" ">
+                              </div>
+                              <div class="form-group">
+                                <label for="ex4">or</label>
+                               
+                              </div>
+                              <div class="btn-group">
+                              <button type="submit" class="btn btn-primary">Show All</button>
+                            </div>
+                            </form><br>
+                            <div class="col-sm-12">
+                              <div class="col-sm-3"></div>
+                              <div class="col-sm-6">
+                              <div class="form-group">
+                             <select name="id" size="10" class="form-control" style="width: 100%" onchange="">
+                                  <option value="0" selected="">Type in the box above to search for a Client</option>
+
+
+                                      </select>
+                            </div>
+                          </div>
+                          <div class="col-sm-3"></div>
+                             
+                         </div>
+                              <div class="btn-group">
+                                <button class="btn btn-default">Edit Client Information</button>
+                                <button class="btn btn-primary">Add new Client</button>
+                            </div>
+                            </div>
+                          
+                       
+                    </div>
+                  </div>
+                    <!-- =================== Tab  Time entry End 2 ================================================-->
+                    <!--=============================== Tab  Time entry 3 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content3" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Matter Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content text-center">
+                              <div class="col-sm-12">
+                                <div class="col-sm-3">
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="col-sm-6">
+                                  <h4><a href="">Unused Matters List</a></h4>
+                                   </div>
+                                  <div class="col-sm-6">
+                                    <h4><a href="">Archived Matter Maintenance</a></h4>
+                              </div>
+                             
+                              </div>
+
+                              <div class="col-sm-3">
+                              </div>
+
+                            </div>
+
+                            <h3>Add, edit or inactivate a Matter:</h3>
+                            <div class="ln_solid"></div>
+                            <form class="form-inline">
+                              <div class="form-group">
+                                <label for="ex3">Type any part of the Matter name or code: </label>
+                                <input type="text" id="ex3" class="form-control" placeholder=" ">
+                              </div>
+                              <div class="form-group">
+                                <label for="ex4">or</label>
+                               
+                              </div>
+                              <div class="btn-group">
+                              <button type="submit" class="btn btn-primary">Show All</button>
+                            </div>
+                            </form>
+                            <div class="checkbox checkbox-inline checkbox-success form-group">
+                                  <input type="checkbox" id="" value="">
+                                  <label for="">include inactive Matters </label>
+                              </div>
+                              <div class="checkbox checkbox-inline checkbox-success ">
+                                  <input type="checkbox" id="" value="">
+                                  <label for="">show inactive only</label>
+                              </div>
+                              <div class="col-sm-12">
+                              <div class="col-sm-3"> </div>
+                              <div class="col-sm-6">
+                              <div class="form-group">
+                             <select name="id" size="10" class="form-control" style="width: 100%" onchange="">
+                                  <option value="0" selected="">Type in the box above to search for matter</option>
+
+
+                                      </select>
+                            </div>
+                          </div>
+                            </div>
+                          <div class="col-sm-3"> </div>
+                          <div class="col-sm-12">
+                              <div class="btn-group">
+                                <button class="btn btn-default">Edit Matter Information</button>
+                                <button class="btn btn-primary">Add new Matter</button>
+                         
+                           </div>
+                         </div>
+                           
+                         
+                            
+                          
+                         
+                          </div>
+                    </div>
+                  </div>
+                    <!-- =================== Tab  Time entry End 3 ================================================-->
+                    <!--=============================== Tab  Time entry 4 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content4" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Activity Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content text-center">
+                                  <h4><a href="">Archived Activities</a></h4>
+
+                            <h3>Add, edit or inactivate an Activity:</h3>
+                            <div class="ln_solid"></div>
+                            <form class="form-inline ">
+                              <div class="form-group">
+                                <label for="ex3">Type any part of the Activity name or code:</label>
+                                <input type="text" id="ex3" class="form-control" placeholder=" ">
+                              </div>
+                              <div class="form-group">
+                                <label for="ex4">or</label>
+                              </div>
+                              <div class="btn-group">
+                              <button type="submit" class="btn btn-primary">Show All</button>
+                            </div>
+                            </form><br>
+                              
+                              
+                            <div class="col-sm-12">
+                              <div class="col-sm-3"></div>
+                              <div class="col-sm-6">
+                              <div class="form-group">
+                             <select name="id" size="10" class="form-control" style="width: 100%" onchange="">
+                                  <option value="0" selected="">No matching Activity names found</option>
+
+
+                                      </select>
+                            </div>
+                          </div>
+                          <div class="col-sm-3"></div>
+                              <div class="btn-group">
+                                <button class="btn btn-default">Edit Activity Information</button>
+                                <button class="btn btn-primary">Add new Activity</button>
+                         
+                           </div>
+                         </div>
+                            </div>
+                          </div>
+                        
+                    </div>
+                    <!-- =================== Tab  Time entry End 4 ================================================-->
+                    <!--=============================== Tab  Time entry 5 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content5" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Users Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content text-center">
+                              <div class="col-sm-12">
+                                <div class="col-sm-3">
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="col-sm-6">
+                                  <h4><a href="">Archived Users Maintenance</a></h4>
+                                   </div>
+                                  <div class="col-sm-6">
+                                    <h4><a href="">Chargeable Users Report</a></h4>
+                              </div>
+                             
+                              </div>
+
+                              <div class="col-sm-3">
+                              </div>
+
+                            </div>
+                            <div class=" col-sm-12">
+                            <button class="btn btn-primary">Add One or More Users</button>
+                          </div>
+                            <div class="col-sm-12">
+                              <h4><label>Or</label></h4>
+                            </div>
+                            <div class="col-sm-12">
+                              <h4><label>Search for a User to edit or set to inactive (i.e. delete)</label></h4>
+                              <form class="form-inline ">
+                              <div class="form-group">
+                                <label for="ex3">Type any part of the User's name or Second User ID: </label>
+                                <input type="text" id="ex3" class="form-control" placeholder=" ">
+                              </div>
+                              <div class="form-group">
+                                <label for="ex4">or</label>
+                              </div>
+                              <div class="btn-group">
+                              <button type="submit" class="btn btn-primary">Show All</button>
+                            </div>
+                            </form>
+                            <form class="form-horizontal">
+                           
+                                  <div class="form-group">
+                                    <div class="radio radio-inline">
+                                       <input name="r" id="" value="" checked="checked" type="radio">
+                                      <label>
+                                        Search Only Active Users
+                                      </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                       <input name="r" id="" value="" type="radio">
+                                      <label>
+                                        Search Only Inactive Users
+                                      </label>
+                                    </div>
+                                    <div class="radio radio-inline">
+                                       <input name="r" id="" value="" type="radio">
+                                      <label>
+                                        Search Both Active and Inactive Users
+                                      </label>
+                                    </div>
+
+                                   </div>
+                                </form>
+                              </div>
+                              <div class="col-sm-12">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-6">
+                                <div class=" form-group " >
+                                <select name="items" size="10" class="form-control"   ondblclick="">
+                                
+                                  <option value="0">Double-click on the User you want to edit:</option>
+                                  <option value=" 48226">Bell, Terry</option>
+                                  <option value=" 50385">Burgraff, Kimberly</option>
+                                  <option value=" 48227">Clarambeau, Adlore</option>
+                                  <option value=" 50138">Diaz, Denise L</option>
+                                  <option value=" 49076">Dracup, Alex</option>
+                                  <option value=" 49807">Dracup, Brittany</option>
+                                  <option value=" 48087">Dracup, Jeffrey</option>
+                                  <option value=" 50128">Jenkins, Michelle A</option>
+                                  <option value=" 50126">Kiamilev, Chandra E</option>
+                                  <option value=" 50155">Larmore, Thomas A</option>
+                                  <option value=" 50428">McQueen, Andrea A</option>
+                                  <option value=" 50125">Payne, Richard</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+                          <div class="col-sm-3"></div> 
+                          <div class="col-sm-12">   
+                              <button class="btn btn-primary">Edit Selected Users</button>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                    <!-- =================== Tab  Time entry End 5 ================================================-->
+                    <!--=============================== Tab  Time entry 6 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content6" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Group Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content ">
+                              <div class="col-sm-12 text-center">
+                                <h4><a href="">Assign users who can view reports for the selected Group</a></h4>
+                              </div>
+                              <div class="col-sm-6">
+                                <div class="">
+                                <label>Select a Group to Edit or Delete</label>
+                              </div>
+                                <select name="id" size="10" class="form-control" style="width: 100%" onchange="">
+                                  <option value="0" selected=""> -- Add New Group -- </option>
+
+                                    <option value="3196">test</option>
+
+                                      </select>
+                              </div>
+                              <div class="col-sm-6 text">
+                                <form class="form-group">
+                                <label> Enter or edit Group name:</label>
+                                <input type="" class="form-control" name="">
+                              </form>
+                              <div class="text-center">
+                                <div class="btn-group" >
+                                <button class="btn btn-default">Save</button>
+                                <button class="btn btn-primary">Delete</button>
+                              </div>
+                            </div>
+                              </div>
+                              
+                            </div>
+                          </div>
+                    </div>
+                    <!-- =================== Tab  Time entry End 6 ================================================-->
+                    <!--=============================== Tab  Time entry 7 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content7" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Expense Types Maintenance</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                  
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content ">
+                              <h4><a href="">Add New Expense Type</a></h4>
+                              <div class="table-responsive">
+                              <table class="table table-striped jambo_table bulk_action">
+                              <thead>
+                                <tr class="headings">
+                                  <th>Expense Type Name</th>
+                                  <th> Expense Type Code</th>
+                                  <th>Expense Type Code for linking to other programs</th>
+                                  <th>Status</th>
+                                  <th>Billable/Changeable by user</th>
+                                  <th>Reimb./Changeable by user</th>
+                                  <th>Unit Price  </th>
+                                  <th>Markup</th>
+                                  <th></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>Air Travel</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>Yes/No</td>
+                                  <td>Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Bal Fwd</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>Yes/No</td>
+                                  <td>Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Court Doc Download Fee</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>Yes/Yes</td>
+                                  <td>Yes/Yes</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Court Filing Fee</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Courtcall - Telephone Appearance Fee</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/No</td>
+                                  <td>  Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                 <tr>
+                                  <td>Delivery charge</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                 <tr>
+                                  <td>Discount</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>  No/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Hotel</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>  Yes/Yes</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Interest</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/No</td>
+                                  <td>  Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Jury Fees</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/No</td>
+                                  <td>  Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                                <tr>
+                                  <td>Mailing/Postage</td>
+                                  <td></td>
+                                  <td></td>
+                                  <td>Active</td>
+                                  <td>  Yes/No</td>
+                                  <td>  Yes/No</td>
+                                  <td>n/a</td>
+                                  <td>0%</td>
+                                  <td><a href="">Edit</a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            </div>
+                          </div>
+                          </div>
+                    </div>
+                    <!-- =================== Tab  Time entry End 7 ================================================-->
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+          Copyright © 1997-2018 Equative, Inc. All Rights Reserved.
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+   
+    <!-- Custom Theme Scripts -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.js"></script>
+      <!-- bootstrap-daterangepicker -->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/Chart.js/dist/Chart.js"></script>
+    <script src="js/echarts/dist/echarts.min.js"></script>
+
+ 
+     <script type="text/javascript">
+        
+            jQuery(function () {
+                jQuery('#datetimepicker1').datetimepicker();
+                jQuery('#datetimepicker2').datetimepicker();
+                jQuery('#datetimepicker3').datetimepicker();
+                jQuery('#datetimepicker4').datetimepicker();
+                jQuery('#datetimepicker5').datetimepicker();
+                jQuery('#datetimepicker6').datetimepicker();
+            });
+           jQuery(document).ready(function($) {
+              jQuery('.x_panel.off').css('height', 'auto');
+              jQuery('.x_content.off').css('display', 'none');
+            });
+
+        </script>
+          <script>
+     
+            jQuery(".desc-click").click(function() {
+             $(".desc-box").css('display', 'block');
+            });
+            jQuery(".cancel-desc").click(function() {
+              $('.desc-box').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click1").click(function() {
+             $(".desc-box1").css('display', 'block');
+            });
+            jQuery(".cancel-desc1").click(function() {
+              $('.desc-box1').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click2").click(function() {
+             $(".desc-box2").css('display', 'block');
+            });
+            jQuery(".cancel-desc2").click(function() {
+              $('.desc-box2').css({
+                display: 'none',
+              });
+            });
+
+             jQuery(".desc-click3").click(function() {
+             $(".desc-box3").css('display', 'block');
+            });
+            jQuery(".cancel-desc3").click(function() {
+              $('.desc-box3').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click4").click(function() {
+             $(".desc-box4").css('display', 'block');
+            });
+            jQuery(".cancel-desc4").click(function() {
+              $('.desc-box4').css({
+                display: 'none',
+              });
+            });
+            
+
+           
+     </script>
+ <!-- iCheck -->
+    <script src="lib/iCheck/icheck.min.js"></script>
+     <script src="js/custom.js"></script>
+     <script src="js/custom-script.js"></script>
+
+<!-- ======================================================   MODALS    =================================================== -->
+              <!-- Feedback-Modal -->
+              
+              <div class="modal fade fdback" id="FeedbackModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Feedback</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="form-group">
+                  <label class="">Things you do not like about this page:</label>
+                    <textarea class="form-control" rows="3" placeholder=""></textarea>
+                    
+                    <label>Things you like about this page:</label>
+                      <textarea class="form-control" rows="3" placeholder=""></textarea>
+                      <label>Suggestions to make TimeLedger better:</label>
+                     <textarea class="form-control" rows="3" placeholder=""></textarea>
+                     </form>
+                      <button class="btn btn-primary">Send These Comments</button>
+                      
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved. &nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                          <!-- Feedback-Modal END -->
+
+                          <!-- Support-Modal -->
+          <div class="modal fade" id="SupportModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Support</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <p>&nbsp&nbsp&nbsp Equative, Inc. provides free support and training for both Free Trial and Licensed Users. If there is something about TimeLedger that doesn't work for you, we want to know about it.</p>
+                       <hr>
+                       <h3>Equative, Inc. offers:</h3>
+                       <ul>
+                     <li>Free Training and Support by email and telephone:</li>
+                    <li>Email <a href="mailto:support@timeledger.com">support@timeledger.com</a> or</li>
+                  <li>Call (800) 239-2201   </li>
+                <li>(Monday - Friday 8 a.m. to 5 p.m. PST Pacific Standard Time)</li>
+              <br>
+                  <li>To schedule on-site training and support, email us at <a href="mailto:support@timeledger.com">support@timeledger.com</a> or</li>
+                     <li>Call Customer Support at (800) 239-2201</li>
+                       <li>(Monday - Friday 8:00 a.m. to 5:00 p.m. PST Pacific Standard Time)</li>
+                 <ul>
+              </div>
+                </div>
+                <div class="modal-footer">
+                 Copyright © 1997-2018 Equative, Inc. All Rights Reserved. &nbsp&nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                      <!-- Support-Modal END -->
+                      <!-- Email This page Modal -->
+          <div class="modal fade" id="EmailModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Email This Page</h2>
+                </div>
+                <div class="modal-body">
+                  <h3>Emailable Report</h3>
+                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">To<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">For:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="" value="alexpdracup@gmail.com" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Subject:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" value="Timeledger Report" type="text" name="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Note:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved.&nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Email This Page Modal END -->
+                    <!-- Tell a Friend Modal -->
+          <div class="space">
+          <div class="modal fade" id="FriendModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2> Tell a Friend</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="form-group " >
+                      <label for="">1. Enter your e-mail address:</label>
+                      <input type="text" id="" class="form-control" name="" required />
+                      <label for="email">2. Enter e-mail addresses of people who might be interested in trying TimeLedger:</label>
+                      <div class="row">
+                      <div class="col-sm-6" >
+                        <input type="" name="" class="form-control">
+                      </div>
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                  </div>
+                    <div class="row" >
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                    </div>
+                 </form>
+              <label>3. Review and/or revise the message to be emailed:</label>
+                  <form class="form-group">
+                          <label>Subject:</label>
+                             <input type="text" id="" class="form-control" name="" value="Web-based time tracking and billing software."  >
+                          </form>
+                       <div class="col-lg-12"></div>
+                    <div ><center><p><textarea cols="55" name="body" rows="4" class="form-control" tabindex="9">Hello!
+
+I wanted to tell you about www.TimeLedger.com - an easy to setup and use online 
+time and expense tracking application for small to large companies.   
+
+Your organization can be setup and using
+www.TimeLedger.com in one hour.
+
+TimeLedger &lt;http://www.TimeLedger.com&gt; allows companies and organizations of
+1 to 10,000 people to collect timesheet and expense information from people
+through mobile devices such as iPhones, iPads and Android phones and through any web browser.
+
+Employees and contractors can also record time and expenses offline on their laptop or desktop
+and also offline using their mobile phones.   Then as soon as they have cell service or WiFi access, 
+their data is automatically synchronized to the main TimeLedger servers.
+
+TimeLedger can produce thousands of graphs, charts and reports and includes 
+powerful ad hoc reporting.   It send email alerts to remind users and
+managers of when projects are running over time and/or expense budgets, and when timesheets 
+need to be submitted for approval.   TimeLedger has a robust approval system that allows
+managers to review individual timesheet detail, ask questions directly to users, and to lock and unlock 
+time entries before final timesheet approval.
+
+Try the fully-functional TimeLedger Free Trial right now at:
+http://www.timeledger.com/signup/
+
+In the Free Trial, you can add any number of users, groups and departments.
+
+
+Contact TimeLedger at sales@timeledger.com 
+
+Equative, Inc.
+270 N. El Camino Real #510
+Encinitas, CA 92024-2874
+
+Or call at (800) 239-2201
+</textarea></p></center></div></td>
+                  <button class="btn btn-primary">Send Email Now</button>
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved.
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- ======================================================   MODALS END   =================================================== -->
+
+  
+
+  </body>
+</html>

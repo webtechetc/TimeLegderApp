@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  
+    <title>App Timeledger</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/bootstrap-datetimepicker.css" rel="stylesheet">
+    <link href="css/daterangepicker.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+
+    <!-- NProgress -->
+   
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i" rel="stylesheet"> 
+
+    <!-- Custom Theme Style -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/custom-style.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col ">
+          <div class="left_col scroll-view">
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+              </div>
+              <div class="profile_info">
+                <span>Welcome,</span>
+                <h2>Alex John</h2>
+              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu ">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                   <li><a href="javascript:;"><i class="fa fa-home"></i> Dashboard </a></li>
+                  <li><a href="time-entry.html"><i class="fa fa-desktop"></i> Time Entry </a></li>
+                 <li><a href="expenses.html"><i class="fa fa-table"></i> Expenses </a></li>
+                  <li><a href="javascript:;"><i class="fa fa-bar-chart-o"></i> Reports </a></li>
+                  <li><a href="maintenance.html"><i class="fa fa-dashboard"></i>Maintenance </a></li>
+                  <li><a href="settings.html"><i class="fa fa-cogs"></i>Settings <span class="fa fa-chevron-down"></span></a>
+                  	<ul class="nav child_menu">
+                      <li><a href="javascript:;">Your Settings</a></li>
+                      <li><a href="javascript:;">Company Settings</a></li>
+                      
+                    </ul>
+                  </li>
+                  <li><a href="javascript:;"><i class="fa fa-exchange"></i>QuickBooks Import/Export </a></li>
+                </ul>
+              </div>
+              
+
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Lock">
+                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+              
+              <div class="logo-app"><img src="images/logo-alex.png" alt="app-logo"></div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="images/img.jpg" alt="">Alex John
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li>
+                      <a href="javascript:;">
+                        <span class="badge bg-red pull-right">50%</span>
+                        <span>Settings</span>
+                      </a>
+                    </li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#SupportModal">Support</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#FeedbackModal">Feedback</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#EmailModal">Email this Page</a></li>
+                    <li><a data-toggle="modal" href="javascript:;" data-target="#FriendModal">Tell a Friend</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-envelope-o"></i>
+                    <span class="badge bg-blue">6</span>
+                  </a>
+                  <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <a>
+                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span>
+                          <span>John Smith</span>
+                          <span class="time">3 mins ago</span>
+                        </span>
+                        <span class="message">
+                          Film festivals used to be do-or-die moments for movie makers. They were where...
+                        </span>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="text-center">
+                        <a>
+                          <strong>See All Alerts</strong>
+                          <i class="fa fa-angle-right"></i>
+                        </a>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col settings" role="main">
+          <div class="">
+            <div class="page-title">
+               <div class="title_left">
+                <br/>
+                <p>Dashboard / Time Entry</p>
+              </div>
+
+              <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="clearfix"></div>
+            <div class="" role="tabpanel" data-example-id="togglable-tabs">
+               <div class="col-md-6 ">
+                <div class="row">
+                  <ul id="myTab" class="nav nav-tabs bar_tabs pull-left" role="tablist" >
+                      <li role="presentation" >
+                        <a href="#tab_content1" id="home-tab" role="tab" data-toggle="tab" aria-expanded="true">Timesheet Period View  </a>
+                      </li>
+                      <li role="presentation" class="active">
+                        <a href="#tab_content2" role="tab" id="profile-tab" data-toggle="tab" aria-expanded="false"> Week View </a>
+                      </li>
+                       <li role="presentation" >
+                        <a href="#tab_contentday" role="tab" id="profile-tab1" data-toggle="tab" aria-expanded="false">Day View</a>
+                      </li>
+                  </ul>
+                </div>
+                </div>
+                <div class="col-md-6 pull-right" >
+                  <div class="row">
+                    <div class="col-sm-3 text-right paddL"  style="padding-top:10px;">
+                        <label for="">Timesheet for:</label>
+                    </div>
+
+                    <div class="col-sm-9" style="margin-bottom0px;">
+                      <div class="row">
+                        <select class="form-control" name="">
+                          <option value="48226">Bell, Terry</option>
+                          <option value="50385">Burgraff, Kimberly</option>
+                          <option value="48227">Clarambeau, Adlore</option>
+                          <option value="50138">Diaz, Denise</option>
+                          <option value="49076">Dracup, Alex</option>
+                          <option value="49807">Dracup, Brittany</option>
+                          <option value="48087" selected="">Dracup, Jeffrey</option>
+                          <option value="50128">Jenkins, Michelle</option>
+                          <option value="50126">Kiamilev, Chandra</option>
+                          <option value="50155">Larmore, Thomas</option>
+                          <option value="50125">Payne, Richard</option>
+                          <option value="48865">Thomas, Cynthia</option>
+                          <option value="48209">Wheeler, Kristie</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="col-xs-12" style="background: #e1e1e1;margin-bottom: 30px;height: 1px;"></div>
+                  
+                <div id="myTabContent" class="tab-content">
+                    <!--=============================== Tab  Time entry 1 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_content1" aria-labelledby="home-tab">
+                       <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Search / Add Client > Matter > Subproject</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content ">
+
+                              <div class="">
+                                <input type="text" name="" Placeholder="Search" id="input" class="form-control" value="" 
+                                required="required" pattern="" title="" style="max-width:250px; display:inline-block;"> 
+                                <a class="btn btn-primary" type="button" bref="#." >Show all</a>
+                                <button type="button" class="btn btn-primary pull-right">Add a Client</button>
+                              </div>
+                              <div class="table-responsive">
+                                <table class="table table-striped jambo_table bulk_action">
+                                  <thead>
+                                    <tr class="headings">
+                                      <th>
+                                        <input type="checkbox" id="check-all" class="flat">
+                                      </th>
+                                      <th class="column-title">Client > Matter > Subproject</th>
+                                      <th class="column-title">Sun<br/>Mar-11 </th>
+                                      <th class="column-title">Mar-12 <br/>Mon </th>
+                                      <th class="column-title">Tue <br/>Mar-13 </th>
+                                      <th class="column-title">Wed<br/>Mar-14</th>
+                                      <th class="column-title">Thu<br/>Mar-15</th>
+                                      <th class="column-title">Fri<br/>Mar-16</th>
+                                      <th class="column-title">Sat<br/>Mar-17</th>
+                                      <th class="column-title">Total<br/>Hours</th>
+                                      <th class="column-title no-link last"><span class="nobr">Action</span>
+                                      </th>
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    <tr class="odd pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="bg-success">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="bg-success">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                   <tr class="odd pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="bg-success">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                     <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                         0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="bg-success">
+                                        0.00
+                                      </td>
+                                      <td class="">
+                                        0.00
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr >
+                                      <td colspan="2" class="text-right"><strong>Billable Total:</strong></td>
+                                      <td class="">Sun<br/>Mar-11 </td>
+                                      <td class="">Mar-12 <br/>Mon </td>
+                                      <td class="">Tue <br/>Mar-13 </td>
+                                      <td class="">Wed<br/>Mar-14</td>
+                                      <td class="">Thu<br/>Mar-15</td>
+                                      <td class="">Fri<br/>Mar-16</td>
+                                      <td class="">Sat<br/>Mar-17</td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr class="bg-info">
+                                      <td colspan="2" class="text-right"><strong>Non-Billable Total:</strong></td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">2.05</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr >
+                                      <td colspan="2" class="text-right"><strong>Total:</strong></td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">2.05</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                
+                                <div class="col-md-3 text-left">
+                                   <div class="row">
+
+                                       <select name="" id="input" class="form-control" required="required">
+                                         <option value="">Per Page</option>
+                                          <option value="">10</option>
+                                          <option value="">20</option>
+                                          <option value="">30</option>
+                                       </select>
+                                   </div>
+                                </div>
+                                <div class="col-md-9 text-right">
+                                   <div class="row">
+                                        <ul class="pagination" style="margin: 0;">
+                                          <li><a href="#">&laquo;</a></li>
+                                          <li><a href="#">1</a></li>
+                                          <li><a href="#">2</a></li>
+                                          <li><a href="#">3</a></li>
+                                          <li><a href="#">4</a></li>
+                                          <li><a href="#">5</a></li>
+                                          <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                   </div>
+                                </div>
+                                <div class="col-xs-12 text-center">
+                                  <button type="button" class="btn btn-primary">Print Timesheet </button>
+                                </div>
+                              </div>
+                              <hr/>
+                                <div class="col-md-6">
+                                    <table class="timesheet-panel table table-bordered " >
+                                      <tbody><tr><td style="font-size:8pt;"><b>Timesheet Approval:</b></td></tr>
+                                      <tr><td><table border="0" width="100%">
+                                        <tbody><tr>
+                                          <td style="font-size:8pt;" align="center"><b>Period</b></td>
+                                          <td> | </td>
+                                          <td style="font-size:8pt;" align="center"><b>Due date</b>
+                                        </td></tr>
+                                        <tr><td colspan="3" height="1" bgcolor="black"></td></tr>
+                                        <tr>
+                                          <td style="font-size:8pt;">From&nbsp;Mar-10-2018&nbsp;To&nbsp;Mar-16-2018</td>
+                                          <td> | </td>
+                                          <td style="font-size:8pt;">Saturday, March 17, 2018</td>
+                                        </tr>
+                                      </tbody></table></td></tr>
+                                      <tr>
+                                        <td colspan="2" class="text-center"><button type="button" class="btn btn-primary">Send for Aprrovel</button></td>
+                                      </tr>
+                                    </tbody></table>
+                                </div>
+                            </div>
+                          </div>
+                    </div>
+                    <!-- =================== Tab  Time entry End 1 ================================================-->
+                    <!--=============================== Tab  Time entry 2 =================================-->
+                    <div role="tabpanel" class="tab-pane fade in active" id="tab_content2" aria-labelledby="home-tab">
+                      <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+
+                          <div class="row">
+                             
+                              <div class="col-md-4 col-sm-6 col-xs-12 paddR" style="padding-right:30px;">
+                                <div class="row">
+                                 <div class="x_panel ">
+                                    <div class="x_title">
+                                      <h2>hours Last 7 days:</h2>
+                                      <ul class="nav navbar-right panel_toolbox">
+                                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                        </li>
+                                        
+                                      </ul>
+                                      <div class="clearfix"></div>
+                                    </div>
+                                    
+                                    <div class="x_content " >
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                          <span class="bill-able-span">Billable <span ></span></span>
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                          <span class="nonbill-able-span">Non-Billable  <span ></span></span>
+                                        </div>
+                                        <canvas id="mybarChart"  ></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6 settings-text" style="padding-top: 110px;">
+                                  <h1>Week View</h1>
+                                  <div class="datetime">
+                                    <strong>Today is Friday, March 16, 2018<br>
+                                      It is 5:31 pm
+                                    </strong> 
+                                  </div>
+                              </div>
+                                <div class="col-md-4 col-sm-6 col-xs-12 paddL" style="padding-left:30px;">
+                                  <div class="row">
+                                    <div class="x_panel">
+                                      <div class="x_title ">
+                                        <h2>7 Day Summary:</h2>
+                                        <ul class="nav navbar-right panel_toolbox">
+                                          <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                          </li>
+                                        </ul>
+                                        <div class="clearfix"></div>
+                                      </div>
+                                      <div class="x_content ">
+                                       
+                                        <div class="col-xs-6 text-center">
+                                          <span class="nonbill-able-span circle">Non-Billable  <span ></span></span>
+                                        </div>
+                                         <div class="col-xs-6 text-center">
+                                          <span class="bill-able-span circle">Billable <span ></span></span>
+                                        </div>
+                                        <canvas id="canvasDoughnut"></canvas>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                          <div class="clearfix"></div>
+                          <div class="x_panel">
+                            <div class="x_title">
+                              <h2>Clients</h2>
+                              <ul class="nav navbar-right panel_toolbox">
+                                <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                              </ul>
+                              <div class="clearfix"></div>
+                            </div>
+
+                            <div class="x_content ">
+                                <div class="row">
+                                  <div class="col-md-6">
+                                     <div class="form-group text-left">
+                                      <form action="" class="form-inline">
+                                        <label>Search: <input class="form-control input-sm" placeholder="" type="search"></label>
+                                      </form>
+                                      
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                     <div class="form-group text-right">
+                                      <div class="btn-group">
+                                        <button type="button" class="btn btn-primary">Previous Week </button>
+                                        <button type="button" class="btn btn-default"> Next Week</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              <div class="clearfix">
+                              
+                              </div>
+            
+                             
+                              <div class="table-responsive">
+                                <table class="table table-striped jambo_table bulk_action">
+                                  <thead>
+                                    <tr class="headings">
+                                      <th>
+                                        <input type="checkbox" id="check-all" class="flat">
+                                      </th>
+                                      <th class="column-title">Client > Matter > Subproject</th>
+                                      <th class="column-title">   Activity</th>
+                                      <th class="column-title">   Billable/<br/>Non-Billable</th>
+                                      <th class="column-title">Sun<br/>Mar-11 </th>
+                                      <th class="column-title">Mar-12 <br/>Mon </th>
+                                      <th class="column-title">Tue <br/>Mar-13 </th>
+                                      <th class="column-title">Wed<br/>Mar-14</th>
+                                      <th class="column-title">Thu<br/>Mar-15</th>
+                                      <th class="column-title">Fri<br/>Mar-16</th>
+                                      <th class="column-title">Sat<br/>Mar-17</th>
+                                      <th class="column-title">Total<br/>Hours</th>
+                                      <th class="column-title no-link last"><span class="nobr">Action</span>
+                                      </th>
+                                    </tr>
+                                  </thead>
+
+                                  <tbody>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                        <!-- <a href="#." title="Add Description">
+                                          <i class="fa fa-plus"></i>
+                                        </a> -->
+
+                                      </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Bill Brink > Deposition Subpoena of Diane Brink</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input desc-click4" value="0.10">
+                                         <div class="desc-box4" style="display:none;">
+                                          <form action="">
+                                            <p class="text-center">Enter a Description</p>
+                                            <textarea id="text-box"></textarea>
+                                            <button type="submit" class="btn btn-primary btn-xs">Save</button>
+                                            <button type="button" class="btn btn-danger btn-xs cancel-desc4">Cancel</button>
+                                          </form>
+                                        </div>
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input" value="">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        0.30
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class="">Non-Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input desc-click3" value="0.50">
+                                          <div class="desc-box3" style="display:none;">
+                                          <form action="">
+                                            <p class="text-center">Enter a Description</p>
+                                            <textarea id="text-box"></textarea>
+                                            <button type="submit" class="btn btn-primary btn-xs">Save</button>
+                                            <button type="button" class="btn btn-danger btn-xs cancel-desc3">Cancel</button>
+                                          </form>
+                                        </div>
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.50
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class=""> Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class=""><small>Telephone call Billable </small></td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                     <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Invoice  Ann Edwards > Eviction - Clairemont Mesa Condo</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="odd pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Bill Brink > Deposition Subpoena of Diane Brink</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input desc-click" value="0.10">
+                                         <div class="desc-box" style="display:none;">
+                                          <form action="">
+                                            <p class="text-center">Enter a Description</p>
+                                            <textarea id="text-box"></textarea>
+                                            <button type="submit" class="btn btn-primary btn-xs">Save</button>
+                                            <button type="button" class="btn btn-danger btn-xs cancel-desc">Cancel</button>
+                                          </form>
+                                        </div>
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input desc-click1" value="0.20">
+                                       <div class="desc-box1" style="display:none;">
+                                          <form action="">
+                                            <p class="text-center">Enter a Description</p>
+                                            <textarea id="text-box"></textarea>
+                                            <button type="submit" class="btn btn-primary btn-xs">Save</button>
+                                            <button type="button" class="btn btn-danger btn-xs cancel-desc1">Cancel</button>
+                                          </form>
+                                        </div>
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        0.30
+
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class="">Non-Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input desc-click2" value="0.50">
+                                         <div class="desc-box2" style="display:none;">
+                                          <form action="">
+                                            <p class="text-center">Enter a Description</p>
+                                            <textarea id="text-box"></textarea>
+                                            <button type="submit" class="btn btn-primary btn-xs">Save</button>
+                                            <button type="button" class="btn btn-danger btn-xs cancel-desc2">Cancel</button>
+                                          </form>
+                                        </div>
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.50
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class=""> Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class="">Billable</td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr class="even pointer">
+                                      <td class="a-center ">
+                                        <input type="checkbox" class="flat" name="table_records">
+                                      </td>
+                                      <td class="">Brent Wood, Gordon Wood, Guinevere Wood > Wood v. Shaw</td>
+                                      <td class=""></td>
+                                      <td class=""><small>Telephone call Billable </small></td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                         <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="bg-success">
+                                        <input type="text" id="" class="week-input ">
+                                      </td>
+                                      <td class="">
+                                        <input type="text" id="" class="week-input">
+                                      </td>
+                                      <td class="" >
+                                        0.00
+                                      </td>
+                                      <td class="a-center">
+                                        <a href="#." title="attachment">
+                                          <i class="fa fa-paperclip"></i>
+                                        </a>
+                                        <a href="#." title="Invoice Preview">
+                                          <i class="fa fa-file"></i>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                    <tr >
+                                      <td colspan="4" class="text-right"><strong>Billable Total:</strong></td>
+                                      <td class="">Sun<br/>Mar-11 </td>
+                                      <td class="">Mar-12 <br/>Mon </td>
+                                      <td class="">Tue <br/>Mar-13 </td>
+                                      <td class="">Wed<br/>Mar-14</td>
+                                      <td class="">Thu<br/>Mar-15</td>
+                                      <td class="">Fri<br/>Mar-16</td>
+                                      <td class="">Sat<br/>Mar-17</td>
+                                      <td class=""></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr class="bg-info">
+                                      <td colspan="4" class="text-right"><strong>Non-Billable Total:</strong></td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">2.05</td>
+                                      <td></td>
+                                    </tr>
+                                    <tr >
+                                      <td colspan="4" class="text-right"><strong>Total:</strong></td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">0.00 </td>
+                                      <td class="">2.05</td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <div class="col-md-3 text-left">
+                                   <div class="row">
+
+                                       <select name="" id="input" class="form-control" required="required">
+                                         <option value="">Per Page</option>
+                                          <option value="">100</option>
+                                          <option value="">250</option>
+                                          <option value="">300</option>
+                                          <option value="">500</option>
+                                       </select>
+                                   </div>
+                                </div>
+                                <div class="col-md-9 text-right">
+                                   <div class="row">
+                                        <ul class="pagination" style="margin: 0;">
+                                          <li><a href="#">&laquo;</a></li>
+                                          <li><a href="#">100</a></li>
+                                          <li><a href="#">2</a></li>
+                                          <li><a href="#">3</a></li>
+                                          <li><a href="#">4</a></li>
+                                          <li><a href="#">5</a></li>
+                                          <li><a href="#">&raquo;</a></li>
+                                        </ul>
+                                   </div>
+                                </div>
+                              </div>
+                              <hr/>
+                                <!-- <div class="col-md-6">
+                                  <h4>Client/Matter not listed?</h4>
+                                  <form action="" method="get" accept-charset="utf-8">
+                                    <div class="form-group">
+                                      <label>Search here:</label>
+                                      <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                                    </div>
+                                    <div class="form-group">         
+                                      <label>Activity:</label>
+                                      <select name="activity" class="form-control" >
+                                        <option value="1" billable="1">Select&nbsp;Activity</option>
+                                      </select> 
+                                    </div>
+                                    <div class="btn-group">
+                                      <button type="button" class="btn btn-primary">Save</button>
+                                      <button type="button" class="btn btn-default">Print</button>
+                                    </div>                          
+                                  </form>
+                                </div> -->
+                                <div class="col-md-6 pull-right">
+                                    <div class="row">
+                                      <table class="timesheet-panel table table-bordered " >
+                                      <tbody><tr><td style="font-size:10pt;"><b>Timesheet Approval</b></td></tr>
+                                      <tr><td><table border="0" width="100%">
+                                        <tbody><tr>
+                                          <td style="font-size:8pt;" align="center"><b>Period</b></td>
+                                          <td> | </td>
+                                          <td style="font-size:8pt;" align="center"><b>Due date</b>
+                                        </td></tr>
+                                        <tr><td colspan="3" height="1" bgcolor="black"></td></tr>
+                                        <tr>
+                                          <td style="font-size:8pt;">Mar-10-2018&nbsp;To&nbsp;Mar-16-2018</td>
+                                          <td> | </td>
+                                          <td style="font-size:8pt;">Saturday, March 17, 2018</td>
+                                        </tr>
+                                      </tbody></table></td></tr>
+                                      <tr>
+                                        <td colspan="2" class="text-center"><button type="button" class="btn btn-primary">Send for Aprrovel</button></td>
+
+                                      </tr>
+                                      <tr><td colspan="2" class="text-center"><button type="button" class="btn btn-primary">Print</button></td></tr>
+                                    </tbody></table>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>        
+                    <!-- =================== Tab  Time entry End 2 ================================================-->
+                    <!--=============================== Tab  Time entry 3 =================================-->
+                    <div role="tabpanel" class="tab-pane fade" id="tab_contentday" aria-labelledby="home-tab">
+                      <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                          <div class="row">
+                            <div class="col-md-12 col-sm-12 col-xs-12 settings-text">
+                                <h1>Day View</h1>
+                                <div class="datetime">
+                                  <strong>Today is Friday, March 16, 2018<br>
+                                    It is 5:31 pm
+                                  </strong> 
+                                </div>
+                            </div>
+                          </div>
+                            <div class="x_panel">
+                              <div class="x_title">
+                                <h2>Add Time Entry for Friday, March 16, 2018</h2>
+                                <ul class="nav navbar-right panel_toolbox">
+                                  <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                  </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                              </div>
+                              <div class="x_content day-edit">
+                                    
+                                    <div class="col-md-6">
+                                        <label><strong>Type any part of the Client or Matter name.</strong>
+                                        <small>For example: "een" will find "Green". </small></label>
+                                        
+                                        <form action="" method="get" accept-charset="utf-8">
+                                          <div class="form-group">
+                                            <input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">
+                                          </div>
+                                          <div class="form-group">
+                                            <button type="button" class="btn btn-primary">Show all</button>
+                                            <a href="#." title="">Add a Client</a>
+                                          </div>
+                                          <div class="form-group">
+                                            Matter is <input type="text"  class="form-control" style="width:50px;display: inline-block;"> % done
+                                          </div>
+                                          <div class="form-group">
+                                            <select name=""  class="form-control" style="width:200px;display: inline-block;">
+                                                <option value="0">0.00 = 0 hr </option>
+                                                <option value="1">0.02 = 01 min</option>
+                                            </select> -OR- 
+                                            
+                                          </div> 
+                                          <div class="form-group">
+                                              <button type="button" class="btn btn-primary">Start</button>
+                                            </div>
+                                          <div class="form-group">Time to be charged using your
+                                              minimum time increment: <strong>0 hr, 6 min</strong>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <form action="" method="get" accept-charset="utf-8">
+                                            <div class="form-group">
+                                                <label >Activity:</label>
+                                                <select name="" id="input" class="form-control" required="required">
+                                                  <option value="">Select an Activity</option>
+                                                </select>
+                                              </div>
+                                             <div class="form-group">
+                                              <label> Description of work done: </label>
+                                               <textarea name="" id="input" class="form-control" rows="3" required="required" placeholder="0/2000"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                              <label>Billable / Non-Billable:</label>
+                                              <select name="" id="input" class="form-control" required="required" >
+                                                <option value="">Billable</option>
+                                                <option value="">Non-Billable:</option>
+                                              </select>
+                                            </div>
+                                            <div class="form-group text-right">
+                                              <button type="button" class="btn btn-primary">Save</button>
+                                            </div>
+                                        </form>  
+                                    </div>
+                                    <div class="col-md-6">
+                                      <table class="timesheet-panel table table-bordered " >
+                                        <tbody><tr><td style="font-size:8pt;"><b>Timesheet Approval:</b></td></tr>
+                                        <tr><td><table border="0" width="100%">
+                                          <tbody><tr>
+                                            <td style="font-size:8pt;" align="center"><b>Period</b></td>
+                                            <td> | </td>
+                                            <td style="font-size:8pt;" align="center"><b>Due date</b>
+                                          </td></tr>
+                                          <tr><td colspan="3" height="1" bgcolor="black"></td></tr>
+                                          <tr>
+                                            <td style="font-size:8pt;">From&nbsp;Mar-10-2018&nbsp;To&nbsp;Mar-16-2018</td>
+                                            <td> | </td>
+                                            <td style="font-size:8pt;">Saturday, March 17, 2018</td>
+                                          </tr>
+                                        </tbody></table></td></tr>
+                                        <tr>
+                                          <td colspan="2" class="text-center"><small class="text-danger">There is no data to submit for Friday, March 16, 2018
+Please input data or select another day in the pay period.</small></td>
+                                        </tr>
+                                      </tbody></table>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                       
+                    </div>
+                    <!-- =================== Tab  Time entry End 3 ================================================-->
+                </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+          Copyright © 1997-2018 Equative, Inc. All Rights Reserved.
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+   
+    <!-- Custom Theme Scripts -->
+     <script src="js/jquery.min.js"></script>
+     <script src="js/bootstrap.js"></script>
+      <!-- bootstrap-daterangepicker -->
+    <script src="js/moment.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/Chart.js/dist/Chart.js"></script>
+    <script src="js/echarts/dist/echarts.min.js"></script>
+
+ 
+     <script type="text/javascript">
+        
+            jQuery(function () {
+                jQuery('#datetimepicker1').datetimepicker();
+                jQuery('#datetimepicker2').datetimepicker();
+                jQuery('#datetimepicker3').datetimepicker();
+                jQuery('#datetimepicker4').datetimepicker();
+                jQuery('#datetimepicker5').datetimepicker();
+                jQuery('#datetimepicker6').datetimepicker();
+            });
+           jQuery(document).ready(function($) {
+              jQuery('.x_panel.off').css('height', 'auto');
+              jQuery('.x_content.off').css('display', 'none');
+            });
+
+        </script>
+          <script>
+     
+            jQuery(".desc-click").dblclick(function() {
+             $(".desc-box").css('display', 'block');
+            });
+            jQuery(".cancel-desc").click(function() {
+              $('.desc-box').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click1").dblclick(function() {
+             $(".desc-box1").css('display', 'block');
+            });
+            jQuery(".cancel-desc1").click(function() {
+              $('.desc-box1').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click2").dblclick(function() {
+             $(".desc-box2").css('display', 'block');
+            });
+            jQuery(".cancel-desc2").click(function() {
+              $('.desc-box2').css({
+                display: 'none',
+              });
+            });
+
+             jQuery(".desc-click3").dblclick(function() {
+             $(".desc-box3").css('display', 'block');
+            });
+            jQuery(".cancel-desc3").click(function() {
+              $('.desc-box3').css({
+                display: 'none',
+              });
+            });
+             jQuery(".desc-click4").dblclick(function() {
+             $(".desc-box4").css('display', 'block');
+            });
+            jQuery(".cancel-desc4").click(function() {
+              $('.desc-box4').css({
+                display: 'none',
+              });
+            });
+            
+
+           
+     </script>
+
+    <script src="js/custom.js"></script>
+    <script src="js/custom-script.js"></script>
+     
+
+
+<!-- ======================================================   MODALS    =================================================== -->
+              <!-- Feedback-Modal -->
+              
+              <div class="modal fade fdback" id="FeedbackModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Feedback</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="form-group">
+                  <label class="">Things you do not like about this page:</label>
+                    <textarea class="form-control" rows="3" placeholder=""></textarea>
+                    
+                    <label>Things you like about this page:</label>
+                      <textarea class="form-control" rows="3" placeholder=""></textarea>
+                      <label>Suggestions to make TimeLedger better:</label>
+                     <textarea class="form-control" rows="3" placeholder=""></textarea>
+                     </form>
+                      <button class="btn btn-primary">Send These Comments</button>
+                      
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved. &nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                          <!-- Feedback-Modal END -->
+
+                          <!-- Support-Modal -->
+          <div class="modal fade" id="SupportModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Support</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="">
+                        <p>&nbsp&nbsp&nbsp Equative, Inc. provides free support and training for both Free Trial and Licensed Users. If there is something about TimeLedger that doesn't work for you, we want to know about it.</p>
+                       <hr>
+                       <h3>Equative, Inc. offers:</h3>
+                       <ul>
+                     <li>Free Training and Support by email and telephone:</li>
+                    <li>Email <a href="mailto:support@timeledger.com">support@timeledger.com</a> or</li>
+                  <li>Call (800) 239-2201   </li>
+                <li>(Monday - Friday 8 a.m. to 5 p.m. PST Pacific Standard Time)</li>
+              <br>
+                  <li>To schedule on-site training and support, email us at <a href="mailto:support@timeledger.com">support@timeledger.com</a> or</li>
+                     <li>Call Customer Support at (800) 239-2201</li>
+                       <li>(Monday - Friday 8:00 a.m. to 5:00 p.m. PST Pacific Standard Time)</li>
+                 <ul>
+              </div>
+                </div>
+                <div class="modal-footer">
+                 Copyright © 1997-2018 Equative, Inc. All Rights Reserved. &nbsp&nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                      <!-- Support-Modal END -->
+                      <!-- Email This page Modal -->
+          <div class="modal fade" id="EmailModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2>Email This Page</h2>
+                </div>
+                <div class="modal-body">
+                  <h3>Emailable Report</h3>
+                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">To<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="">For:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="last-name" name="" value="alexpdracup@gmail.com" required="required" class="form-control col-md-7 col-xs-12">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Subject:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="middle-name" class="form-control col-md-7 col-xs-12" value="Timeledger Report" type="text" name="">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">Note:</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <textarea class="form-control" rows="3" placeholder=""></textarea>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved.&nbsp&nbsp&nbsp
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                    <!-- Email This Page Modal END -->
+                    <!-- Tell a Friend Modal -->
+          <div class="space">
+          <div class="modal fade" id="FriendModal" role="dialog">
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                 <h2> Tell a Friend</h2>
+                </div>
+                <div class="modal-body">
+                  <form class="form-group " >
+                      <label for="">1. Enter your e-mail address:</label>
+                      <input type="text" id="" class="form-control" name="" required />
+                      <label for="email">2. Enter e-mail addresses of people who might be interested in trying TimeLedger:</label>
+                      <div class="row">
+                      <div class="col-sm-6" >
+                        <input type="" name="" class="form-control">
+                      </div>
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                  </div>
+                    <div class="row" >
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="" name="" class="form-control">
+                    </div>
+                    </div>
+                 </form>
+              <label>3. Review and/or revise the message to be emailed:</label>
+                  <div class="form-group">
+                        <label class="control-label col-md-2 col-sm-2" for="">Subject:</label>
+                        <div class="col-xs-8">
+                          <input type="text" id="" name="" value="Web-based time tracking and billing software." required="required" class="form-control  col-xs-10"  required />
+                        </div>
+                      </div>
+                       <div class="col-lg-12"></div>
+                    <div ><center><p><textarea cols="55" name="body" rows="4" class="form-control" tabindex="9">Hello!
+
+I wanted to tell you about www.TimeLedger.com - an easy to setup and use online 
+time and expense tracking application for small to large companies.   
+
+Your organization can be setup and using
+www.TimeLedger.com in one hour.
+
+TimeLedger &lt;http://www.TimeLedger.com&gt; allows companies and organizations of
+1 to 10,000 people to collect timesheet and expense information from people
+through mobile devices such as iPhones, iPads and Android phones and through any web browser.
+
+Employees and contractors can also record time and expenses offline on their laptop or desktop
+and also offline using their mobile phones.   Then as soon as they have cell service or WiFi access, 
+their data is automatically synchronized to the main TimeLedger servers.
+
+TimeLedger can produce thousands of graphs, charts and reports and includes 
+powerful ad hoc reporting.   It send email alerts to remind users and
+managers of when projects are running over time and/or expense budgets, and when timesheets 
+need to be submitted for approval.   TimeLedger has a robust approval system that allows
+managers to review individual timesheet detail, ask questions directly to users, and to lock and unlock 
+time entries before final timesheet approval.
+
+Try the fully-functional TimeLedger Free Trial right now at:
+http://www.timeledger.com/signup/
+
+In the Free Trial, you can add any number of users, groups and departments.
+
+
+Contact TimeLedger at sales@timeledger.com 
+
+Equative, Inc.
+270 N. El Camino Real #510
+Encinitas, CA 92024-2874
+
+Or call at (800) 239-2201
+</textarea></p></center></div></td>
+                  <button class="btn btn-primary">Send Email Now</button>
+                </div>
+                <div class="modal-footer">
+                  Copyright © 1997-2018 Equative, Inc. All Rights Reserved.
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+<!-- ======================================================   MODALS END   =================================================== -->
+  </body>
+</html>
