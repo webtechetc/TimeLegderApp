@@ -1,2 +1,2 @@
 # TimeLegderApp
-New design for APP.TimeLesger
+New design for APP.TimeLedger
